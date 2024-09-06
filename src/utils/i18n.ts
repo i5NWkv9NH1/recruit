@@ -1,6 +1,6 @@
-import { createI18n } from 'vue-i18n'
 import enUS from 'vant/es/locale/lang/en-US'
 import zhCN from 'vant/es/locale/lang/zh-CN'
+import { createI18n } from 'vue-i18n'
 
 /**
  * All i18n resources specified in the plugin `include` option can be loaded

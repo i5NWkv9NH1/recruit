@@ -9,7 +9,8 @@
     "persistPiniaState": "🍍 持久化 Pinia 状态",
     "404Demo": "🙅 404页 演示",
     "unocssExample": "🎨 Unocss 示例",
-    "keepAlive": "🧡 KeepAlive 演示"
+    "keepAlive": "🧡 KeepAlive 演示",
+    "my": "个人中心"
   },
   "mock": {
     "fromAsyncData": "来自异步请求的数据",
@@ -26,8 +27,10 @@
     "June": "6月"
   },
   "layouts": {
-    "home": "首页",
-    "profile": "我的"
+    "task": "任务",
+    "contract": "合约",
+    "message": "消息",
+    "my": "个人中心"
   },
   "profile": {
     "placeholder": "未完成"

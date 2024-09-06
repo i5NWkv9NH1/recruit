@@ -12,14 +12,26 @@ const show = computed(() => {
 
 <template>
   <van-tabbar v-if="show" v-model="active" placeholder route>
-    <van-tabbar-item replace to="/">
-      {{ t('layouts.home') }}
+    <van-tabbar-item replace to="/task">
+      {{ t('layouts.task') }}
       <template #icon>
-        <div class="i-carbon:home" />
+        <div class="i-carbon:task" />
       </template>
     </van-tabbar-item>
-    <van-tabbar-item replace to="/profile">
-      {{ t('layouts.profile') }}
+    <van-tabbar-item replace to="/contract">
+      {{ t('layouts.contract') }}
+      <template #icon>
+        <div class="i-carbon:doc" />
+      </template>
+    </van-tabbar-item>
+    <van-tabbar-item replace to="/message">
+      {{ t('layouts.message') }}
+      <template #icon>
+        <div class="i-carbon:chat" />
+      </template>
+    </van-tabbar-item>
+    <van-tabbar-item replace to="/my">
+      {{ t('layouts.my') }}
       <template #icon>
         <div class="i-carbon:user" />
       </template>

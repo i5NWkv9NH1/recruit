@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { EChartsOption } from 'echarts';
+
 definePage({
   name: 'charts',
   meta: {
@@ -10,7 +12,7 @@ definePage({
 
 const { t } = useI18n()
 
-const barOption = {
+const barOption: EChartsOption = {
   title: {},
   tooltip: {},
   xAxis: {
@@ -26,7 +28,7 @@ const barOption = {
   ],
 }
 
-const lineOption = {
+const lineOption: EChartsOption = {
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -42,7 +44,7 @@ const lineOption = {
   ],
 }
 
-const scoreOption = {
+const scoreOption: EChartsOption = {
   tooltip: {
     formatter: '{a} <br/>{b} : {c}%',
   },

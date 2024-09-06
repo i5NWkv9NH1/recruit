@@ -26,8 +26,10 @@
     "June": "Jun"
   },
   "layouts": {
-    "home": "HOME",
-    "profile": "PROFILE"
+    "task": "Task",
+    "contract": "Contract",
+    "message": "Message",
+    "my": "My"
   },
   "profile": {
     "placeholder": "WIP"
