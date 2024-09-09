@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EChartsOption } from 'echarts';
+import type { EChartsOption } from 'echarts'
 
 definePage({
   name: 'charts',

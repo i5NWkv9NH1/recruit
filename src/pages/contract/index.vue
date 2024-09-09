@@ -1,19 +1,61 @@
 <script setup lang="ts">
-import { definePage } from 'unplugin-vue-router/runtime';
-import { useI18n } from 'vue-i18n';
+import { isEmpty } from 'lodash-es'
+import { definePage } from 'unplugin-vue-router/runtime'
+
 definePage({
-  name: 'contract',
+  name: 'Contract',
+  query: {
+    tab: 0,
+  },
   meta: {
     title: '合约',
-    i18n: 'menus.contract',
     level: 1,
   },
 })
-const { t } = useI18n()
+const route = useRoute<'Contract'>()
+const router = useRouter()
+const tab = ref(0)
+const tabs = ref([
+  { name: '待签约', value: 0 },
+  { name: '履约中', value: 1 },
+  { name: '已完成', value: 2 },
+  { name: '已失效', value: 3 },
+])
+//* Query
+//* Fix tabnav actived (extac)
+const query = route.query
+if (isEmpty(query)) {
+  router.replace('/contract?tab=0')
+}
+else {
+  tab.value = +query.tab
+}
+const { items, loadPage, resetPaginate, empty, hasNext } = usePaginationMock(100)
+const { loading, finished, loadMore, resetLoadMore } = useLoadMore(hasNext, loadPage)
+const { refreshing, onRefresh } = useRefresh(resetPaginate, resetLoadMore)
+resetPaginate()
+
+function onRendered() {}
+function onChange() {
+  router.replace(`/contract?tab=${tab.value}`)
+}
 </script>
 
 <template>
-  <div>
-    {{  t('layouts.contract') }}
+  <div class="h-[calc(100vh-52px-42px)] bg-[var(--van-background-2)] pa-16">
+    <VanTabs v-model:active="tab" @rendered="onRendered" @change="onChange">
+      <VanTab v-for="_tab in tabs" :key="_tab.name" :title="_tab.name">
+        <VanPullRefresh v-model="refreshing" @refresh="onRefresh">
+          <VanList v-model:loading="loading" :finished="finished" @load="loadMore">
+            <template v-if="empty">
+              <VanEmpty description="No Data" />
+            </template>
+            <template v-else>
+              <Task v-for="item in items" :key="item" />
+            </template>
+          </VanList>
+        </VanPullRefresh>
+      </VanTab>
+    </VanTabs>
   </div>
 </template>

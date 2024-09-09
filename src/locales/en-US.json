@@ -9,7 +9,9 @@
     "echartsDemo": "📊 Echarts Demo",
     "persistPiniaState": "🍍 Persistent Pinia state",
     "unocssExample": "🎨 Unocss example",
-    "keepAlive": "🧡 KeepAlive Demo"
+    "keepAlive": "🧡 KeepAlive Demo",
+    "login": "Login",
+    "my": "My"
   },
   "mock": {
     "fromAsyncData": "Data from asynchronous requests",

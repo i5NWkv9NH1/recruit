@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 import { createHead } from '@unhead/vue'
+import { saveScrollTop } from './directive'
 import App from '@/App.vue'
 import router from '@/router'
 import pinia from '@/stores'
+// import 'normalize.css'
 import 'virtual:uno.css'
 import '@/styles/app.less'
 import { i18n } from '@/utils/i18n'
@@ -28,5 +30,6 @@ app.use(head)
 app.use(router)
 app.use(pinia)
 app.use(i18n)
+app.directive('saveScrollTop', saveScrollTop)
 
 app.mount('#app')

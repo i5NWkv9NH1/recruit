@@ -1,4 +1,4 @@
-import type { AxiosError, InternalAxiosRequestConfig } from 'axios'
+import type { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
 import { showNotify } from 'vant'
 import { localStorage } from '@/utils/local-storage'
@@ -62,8 +62,8 @@ function requestHandler(config: InternalAxiosRequestConfig): InternalAxiosReques
 request.interceptors.request.use(requestHandler, errorHandler)
 
 // 响应拦截器
-function responseHandler(response: { data: any }) {
-  return response.data
+function responseHandler(response: AxiosResponse) {
+  return response
 }
 
 // Add a response interceptor

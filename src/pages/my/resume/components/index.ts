@@ -1,0 +1,7 @@
+export { default as BasicInfo } from './BaseInfo.vue'
+export { default as Advantage } from './Advantage.vue'
+export { default as PositionType } from './PositionType.vue'
+export { default as ExcellentSkill } from './ExcellentSkill.vue'
+export { default as WorkExperience } from './WorkExperience.vue'
+export { default as ProjectExperience } from './ProjectExperience.vue'
+export { default as EducationExperience } from './EducationExperience.vue'

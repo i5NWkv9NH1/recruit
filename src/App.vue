@@ -45,13 +45,13 @@ onMounted(() => {
 <template>
   <VanConfigProvider :theme="mode">
     <NavBar />
-    <router-view v-slot="{ Component, route }">
-      <transition :name="routeTransitionName">
-        <keep-alive :include="keepAliveRouteNames">
+    <RouterView v-slot="{ Component, route }">
+      <Transition :name="routeTransitionName">
+        <KeepAlive :include="keepAliveRouteNames">
           <component :is="Component" :key="route.name" />
-        </keep-alive>
-      </transition>
-    </router-view>
+        </KeepAlive>
+      </Transition>
+    </RouterView>
     <TabBar />
   </VanConfigProvider>
 </template>
