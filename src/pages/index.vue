@@ -5,6 +5,7 @@ import { languageColumns, locale } from '@/utils/i18n'
 
 definePage({
   name: 'Home',
+  redirect: '/redirect',
   meta: {
     title: '主页',
     i18n: 'menus.home',

@@ -39,7 +39,7 @@ const showLeftArrow = computed(() => {
   />
 </template>
 
-<style lang="less">
+<style lang="scss" scoped>
 .van-nav-bar {
   z-index: 2;
 }

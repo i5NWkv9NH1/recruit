@@ -4,14 +4,14 @@ import { promiseTimeout } from '@vueuse/core'
 import { isEmpty } from 'lodash-es'
 
 defineOptions({
-  name: 'TaskSearch',
+  name: 'TalentSearch',
 })
 
 definePage({
-  name: 'TaskSearch',
+  name: 'TalentSearch',
   meta: {
     level: 2,
-    title: '职位搜索',
+    title: '人才搜索',
     i18n: 'menus.search',
     keepAlive: true,
   },
@@ -67,10 +67,10 @@ async function _onRefresh() {
       <template v-else-if="search && !empty">
         <VanPullRefresh v-model="refreshing" @refresh="_onRefresh">
           <VanList v-model:loading="loading" :finished="finished" finished-text="已加载全部" loading-text="加载中。。。" error-text="遇到错误，请刷新重试" @load="loadMore">
-            <div>
+            <div class="mt-16 flex flex-col gap-8">
               <template v-for="_item in items" :key="_item">
                 <div :data-id="_item" class="task__wrapper">
-                  <Task />
+                  <Talent />
                 </div>
               </template>
             </div>

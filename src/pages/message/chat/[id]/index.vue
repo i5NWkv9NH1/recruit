@@ -85,7 +85,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .message-container {
   display: flex;
   margin-bottom: 16px;

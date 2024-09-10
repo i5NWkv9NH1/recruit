@@ -4,7 +4,7 @@ import pinyin from 'js-pinyin'
 import CityJSON from '@/api/city.json'
 
 definePage({
-  name: 'TaskCity',
+  name: 'TalentCity',
   meta: {
     title: '城市',
     level: 2,

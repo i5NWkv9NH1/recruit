@@ -109,7 +109,7 @@ resetPaginate()
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .van-nav-bar :deep(.van-nav-bar__left) {
   position: static;
   padding: 0;

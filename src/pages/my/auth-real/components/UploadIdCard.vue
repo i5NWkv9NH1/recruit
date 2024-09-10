@@ -64,23 +64,23 @@ function onOversize(_file: File) {
   </div>
 </template>
 
-<style lang="css" scoped>
->>> .van-uploader__wrapper {
+<style lang="scss" scoped>
+:deep(.van-uploader__wrapper) {
   width: 100%;
   height: 100%;
 }
->>> .van-uploader__input-wrapper {
+:deep(.van-uploader__input-wrapper) {
   flex: 1;
   width: 100%;
   height: 100%;
 }
 /* preview */
->>> .van-uploader__preview {
+:deep(.van-uploader__preview) {
   width: 100%;
   height: 100%;
   margin: 0;
 }
->>> .van-uploader__preview-image {
+:deep(.van-uploader__preview-image) {
   width: 100%;
   height: 100%;
 }

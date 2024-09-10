@@ -2,10 +2,10 @@
 import { isEmpty } from 'lodash-es'
 
 defineOptions({
-  name: 'TaskPositionType',
+  name: 'TalentPositionType',
 })
 definePage({
-  name: 'TaskPositionType',
+  name: 'TalentPositionType',
   meta: {
     title: '职位类型',
     level: 2,
@@ -86,7 +86,7 @@ function onSelect(id: number) {
 </template>
 
 <style lang="scss" scoped>
-:deep(.van-button__content) {
+:deep(.van-button .van-button__content) {
   display: inline !important;
 }
 </style>

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createHead } from '@unhead/vue'
 import { saveScrollTop } from './directive'
+import setupRoleGuard from './router/roleGuard'
 import App from '@/App.vue'
 import router from '@/router'
 import pinia from '@/stores'
@@ -28,6 +29,7 @@ const head = createHead()
 
 app.use(head)
 app.use(router)
+setupRoleGuard()
 app.use(pinia)
 app.use(i18n)
 app.directive('saveScrollTop', saveScrollTop)

@@ -20,7 +20,16 @@ resetPaginate()
     <template v-else>
       <VanPullRefresh v-model="refreshing" @refresh="onRefresh">
         <VanList v-model:loading="loading" :finished="finished" @load="loadMore">
-          <Task v-for="t in items" :key="t" />
+          <div class="flex flex-col gap-8">
+            <Role>
+              <template #user>
+                <Task v-for="t in items" :key="t" />
+              </template>
+              <template #enterprise>
+                <Talent v-for="t in items" :key="t" />
+              </template>
+            </Role>
+          </div>
         </VanList>
       </VanPullRefresh>
     </template>

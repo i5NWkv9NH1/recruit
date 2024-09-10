@@ -45,7 +45,7 @@ async function onChange() {
     <VanPullRefresh v-model="refreshing" class="min-h-[calc(100vh-52px)]" @refresh="onRefresh">
       <div class="account h-fit bg-[var(--van-primary-color)] pa-16">
         <div class="account__headline w-full flex items-center justify-between text-6xl text-[var(--van-text-color)] font-light">
-          <div class="headline__explain flex gap-4">
+          <div class="headline__explain flex gap-4" @click="router.push('/my/account/coin-explain')">
             <div>账户余额（业务货币）</div>
             <div class="i-carbon-help h-15 w-15" />
           </div>
@@ -70,7 +70,7 @@ async function onChange() {
             <div class="text-7xl">
               ¥ 0
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4" @click="router.push('/my/account/deposit-explain')">
               <div>签约押金（不可用）</div>
               <div class="i-carbon-help h-20 w-20 bg-[white]" />
             </div>
@@ -96,7 +96,7 @@ async function onChange() {
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .navbar::after {
   display: none;
 }

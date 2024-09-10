@@ -15,6 +15,7 @@ export function useLoadMore(hasNext: ComputedRef<boolean>, loadPage?: () => Prom
   const resetLoadMore = () => {
     finished.value = false
     loading.value = false
+    loadPage?.()
   }
 
   return {

@@ -4,7 +4,7 @@ const active = ref(0)
 const route = useRoute()
 
 const show = computed(() => {
-  if (route.meta.level && route.meta.level !== 2)
+  if (route.meta.level && route.meta.level <= 1)
     return true
   return false
 })
@@ -12,12 +12,24 @@ const show = computed(() => {
 
 <template>
   <van-tabbar v-if="show" v-model="active" route placeholder>
-    <van-tabbar-item replace to="/task">
-      {{ t('layouts.task') }}
-      <template #icon>
-        <div class="i-carbon:task" />
+    <Role>
+      <template #user>
+        <van-tabbar-item replace to="/task">
+          {{ t('layouts.task') }}
+          <template #icon>
+            <div class="i-carbon:task" />
+          </template>
+        </van-tabbar-item>
       </template>
-    </van-tabbar-item>
+      <template #enterprise>
+        <van-tabbar-item replace to="/talent">
+          人才
+          <template #icon>
+            <div class="i-carbon:task" />
+          </template>
+        </van-tabbar-item>
+      </template>
+    </Role>
     <van-tabbar-item replace to="/contract">
       {{ t('layouts.contract') }}
       <template #icon>

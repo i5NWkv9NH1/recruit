@@ -15,6 +15,7 @@ declare module 'vue' {
     MessageList: typeof import('./components/List/MessageList.vue')['default']
     NavBar: typeof import('./components/NavBar.vue')['default']
     ResumeCell: typeof import('./components/ResumeCell.vue')['default']
+    Role: typeof import('./components/Role.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SystemMessage: typeof import('./components/SystemMessage.vue')['default']

@@ -78,7 +78,7 @@ function onRead() {
   </VanSwipeCell>
 </template>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 // .badge :deep(.van-badge) {
 //   font-size: 1rem;
 // }
