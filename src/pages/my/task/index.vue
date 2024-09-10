@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import useUserStore from '@/stores/modules/user'
-
 definePage({
   name: 'MyTask',
   meta: {

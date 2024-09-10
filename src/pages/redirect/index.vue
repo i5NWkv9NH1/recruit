@@ -10,9 +10,18 @@ definePage({
 const userStore = useUserStore()
 const router = useRouter()
 switch (userStore.role) {
-  case 'user': router.replace('/task'); break
-  case 'enterprise': router.replace('/talent'); break
-  default: router.push('/my'); break
+  case 'user': {
+    router.replace('/task')
+    break
+  }
+  case 'enterprise': {
+    router.replace('/talent')
+    break
+  }
+  default: {
+    router.push('/my')
+    break
+  }
 }
 </script>
 
